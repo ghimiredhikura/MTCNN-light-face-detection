@@ -1,14 +1,6 @@
-# mtcnn_light_self_adaption
-mtcnn-light version of adaptive image size
+# MTCNN light face detection and evaluation
 
-All the friends used to know that mtcnn-light needs to set up the width and height of the image in advance to initialize the network, which is not conducive to the face detection of different sizes of image input.
-
-This project consummate the mtcnn-light version. We only need to initialize the network once, and we can detect faces for different sizes of images.
-
-Opt: 
-
-1.Adds a minimum face parameter to face detection.
-
-2.The error of mtcnn-light in setting minimum size is solved.
-
-3.Blog address: https://blog.csdn.net/samylee/
+### Regerence:
+1. MTCNN - Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks](https://kpzhang93.github.io/MTCNN_face_detection_alignment/index.html)
+2. [MTCNN Light](https://github.com/AlphaQi/MTCNN-light)
+3. [MTCNN Light Self Adaption](https://github.com/samylee/mtcnn_light_self_adaption)
