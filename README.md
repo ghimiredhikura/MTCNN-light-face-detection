@@ -22,6 +22,7 @@ Dataset download: Please refer to this [git](https://github.com/bonseyes/SFD/blo
 #### a. [AFW](http://www.ics.uci.edu/~xzhu/face/), PASCAL ([train-val](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html), [test](http://host.robots.ox.ac.uk:8080/eval/challenges/voc2012/)) and [FDDB](http://vis-www.cs.umass.edu/fddb/index.html)
 
 #### b. [WIDER](http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/)
+![Alt text](https://github.com/bonseyes/SFD/blob/master/docs/assets/AFW_sfd-mtcnn.png)
 
 ### 3. References:
 
