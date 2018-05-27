@@ -6,7 +6,7 @@
 2. [MTCNN Light](https://github.com/AlphaQi/MTCNN-light)
 3. [MTCNN Light Self Adaption](https://github.com/samylee/mtcnn_light_self_adaption)
 
-This repository contains MTCNN implementation with no framework. Most of the source code is adapted from [MTCNN Light](https://github.com/AlphaQi/MTCNN-light) and [MTCNN Light Self Adaption](https://github.com/samylee/mtcnn_light_self_adaption). It is implemented in core C++ with OpenCV and openblas. Advandages of this implementations are 1. easy to use, 2. no deep learning framework need, 3. can run real time in CPU.  
+This repository contains MTCNN implementation with no framework. Most of the source code is adapted from [MTCNN Light](https://github.com/AlphaQi/MTCNN-light) and [MTCNN Light Self Adaption](https://github.com/samylee/mtcnn_light_self_adaption). It is implemented in core C++ with OpenCV and openblas. Advandages of this implementations are 1. easy to use, 2. no deep learning framework need, 3. real time runtime performance in CPU.  
 
 ### Usage
 
