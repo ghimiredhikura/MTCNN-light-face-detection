@@ -1,0 +1,4 @@
+13--Interview/13_Interview_Interview_Sequences_13_630.jpg
+2
+343 169 34 34 0.310323
+321 58 83 83 0.999976

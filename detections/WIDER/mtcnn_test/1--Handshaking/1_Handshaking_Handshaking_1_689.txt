@@ -1,0 +1,4 @@
+1--Handshaking/1_Handshaking_Handshaking_1_689.jpg
+2
+443 1257 41 41 0.305032
+276 205 543 543 1

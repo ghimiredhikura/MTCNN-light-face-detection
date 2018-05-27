@@ -1,0 +1,6 @@
+8--Election_Campain/8_Election_Campain_Election_Campaign_8_336.jpg
+4
+167 65 47 48 0.187673
+245 90 43 42 0.772862
+214 79 45 45 0.266985
+118 127 424 424 0.492014

@@ -1,0 +1,4 @@
+25--Soldier_Patrol/25_Soldier_Patrol_Soldier_Patrol_25_624.jpg
+2
+374 361 31 31 0.133787
+487 9 536 559 0.999997

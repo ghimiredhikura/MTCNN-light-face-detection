@@ -1,0 +1,4 @@
+59--people--driving--car/59_peopledrivingcar_peopledrivingcar_59_571.jpg
+2
+944 225 67 67 0.383107
+273 200 253 253 0.999832

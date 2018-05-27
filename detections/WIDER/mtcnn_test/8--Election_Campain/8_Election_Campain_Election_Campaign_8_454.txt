@@ -1,0 +1,6 @@
+8--Election_Campain/8_Election_Campain_Election_Campaign_8_454.jpg
+4
+888 283 57 56 0.256422
+720 521 44 44 0.140802
+678 119 212 213 0.999354
+59 0 418 383 0.999987

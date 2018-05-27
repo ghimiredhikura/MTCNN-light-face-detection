@@ -1,0 +1,4 @@
+49--Greeting/49_Greeting_peoplegreeting_49_638.jpg
+2
+672 393 50 49 0.20858
+398 59 242 243 1

@@ -1,0 +1,5 @@
+32--Worker_Laborer/32_Worker_Laborer_Worker_Laborer_32_476.jpg
+3
+96 393 38 38 0.231604
+433 550 27 25 0.103009
+616 432 32 32 0.958959

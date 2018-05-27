@@ -1,0 +1,6 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_832.jpg
+4
+720 295 49 49 0.280478
+651 318 75 75 0.23923
+536 746 79 79 0.100667
+242 325 450 450 0.999908

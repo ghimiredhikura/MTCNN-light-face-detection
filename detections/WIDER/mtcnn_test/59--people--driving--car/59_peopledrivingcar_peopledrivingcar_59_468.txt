@@ -1,0 +1,5 @@
+59--people--driving--car/59_peopledrivingcar_peopledrivingcar_59_468.jpg
+3
+228 613 40 41 0.20366
+337 582 72 72 0.231692
+54 115 486 486 0.999953

@@ -1,0 +1,6 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_582.jpg
+4
+452 146 48 49 0.242105
+754 199 44 44 0.321205
+438 1383 65 65 0.482725
+36 274 953 953 1

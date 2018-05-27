@@ -1,0 +1,6 @@
+59--people--driving--car/59_peopledrivingcar_peopledrivingcar_59_1021.jpg
+4
+481 298 42 41 0.280873
+152 50 124 124 1
+83 108 60 60 0.145274
+317 11 87 86 0.100297

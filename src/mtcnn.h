@@ -141,7 +141,7 @@ class mtcnn
 {
 public:
 	mtcnn();
-	void findFace(Mat &image, int min_size);
+	vector<struct Bbox> findFace(Mat &image, int min_size);
 private:
 	Mat reImage;
 	float nms_threshold[3];

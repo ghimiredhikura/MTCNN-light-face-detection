@@ -1,0 +1,5 @@
+52--Photographers/52_Photographers_photographertakingphoto_52_81.jpg
+3
+554 109 64 64 0.188589
+793 607 70 70 0.120362
+572 283 227 228 0.270643

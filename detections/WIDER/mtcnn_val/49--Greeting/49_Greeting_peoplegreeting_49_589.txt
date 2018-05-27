@@ -1,0 +1,4 @@
+49--Greeting/49_Greeting_peoplegreeting_49_589.jpg
+2
+229 535 105 104 0.181084
+222 175 378 378 1

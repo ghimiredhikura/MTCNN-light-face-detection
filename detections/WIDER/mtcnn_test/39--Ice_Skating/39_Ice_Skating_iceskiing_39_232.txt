@@ -1,0 +1,4 @@
+39--Ice_Skating/39_Ice_Skating_iceskiing_39_232.jpg
+2
+373 323 34 34 0.150745
+844 639 40 41 0.148518

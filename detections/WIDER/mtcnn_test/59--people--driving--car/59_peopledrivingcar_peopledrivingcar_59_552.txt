@@ -1,0 +1,5 @@
+59--people--driving--car/59_peopledrivingcar_peopledrivingcar_59_552.jpg
+3
+745 535 40 40 0.157799
+420 558 50 51 0.245986
+446 161 310 310 0.999997

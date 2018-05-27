@@ -1,0 +1,4 @@
+39--Ice_Skating/39_Ice_Skating_iceskiing_39_210.jpg
+2
+883 143 35 36 0.307439
+167 194 25 26 0.102934

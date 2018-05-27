@@ -1,0 +1,5 @@
+16--Award_Ceremony/16_Award_Ceremony_Awards_Ceremony_16_395.jpg
+3
+375 938 44 44 0.125401
+627 1448 35 36 0.169411
+284 343 623 623 1

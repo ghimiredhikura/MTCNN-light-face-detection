@@ -1,0 +1,5 @@
+35--Basketball/35_Basketball_playingbasketball_35_775.jpg
+3
+896 1019 25 24 0.292257
+355 776 65 64 0.622943
+158 9 804 804 0.999965

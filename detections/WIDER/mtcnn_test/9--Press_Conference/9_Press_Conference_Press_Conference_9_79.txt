@@ -1,0 +1,5 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_79.jpg
+3
+950 400 47 47 0.130754
+789 102 120 121 0.169045
+280 161 355 355 1

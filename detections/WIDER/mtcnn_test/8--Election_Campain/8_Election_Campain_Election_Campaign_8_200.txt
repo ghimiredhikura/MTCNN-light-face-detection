@@ -1,0 +1,6 @@
+8--Election_Campain/8_Election_Campain_Election_Campaign_8_200.jpg
+4
+688 30 121 121 0.166928
+661 78 172 172 0.37744
+230 602 211 177 0.586344
+326 372 290 290 0.999993

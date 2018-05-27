@@ -1,0 +1,6 @@
+59--people--driving--car/59_peopledrivingcar_peopledrivingcar_59_323.jpg
+4
+50 277 41 41 0.390292
+547 350 198 198 0.566386
+521 104 232 232 1
+740 176 237 237 0.182944

@@ -1,0 +1,5 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_276.jpg
+3
+737 400 62 62 0.641252
+615 415 176 176 0.248605
+177 250 524 524 0.999976

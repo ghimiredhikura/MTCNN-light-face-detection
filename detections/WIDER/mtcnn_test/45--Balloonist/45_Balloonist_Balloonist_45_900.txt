@@ -1,0 +1,4 @@
+45--Balloonist/45_Balloonist_Balloonist_45_900.jpg
+2
+538 657 31 31 0.671788
+448 110 134 134 0.999958

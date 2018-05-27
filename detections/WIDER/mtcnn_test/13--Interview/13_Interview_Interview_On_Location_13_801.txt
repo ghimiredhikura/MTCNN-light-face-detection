@@ -1,0 +1,5 @@
+13--Interview/13_Interview_Interview_On_Location_13_801.jpg
+3
+358 230 22 23 0.999814
+201 247 27 26 0.9999
+370 347 27 27 0.19079

@@ -1,0 +1,6 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_632.jpg
+4
+35 947 46 46 0.15763
+433 24 57 57 0.182464
+572 45 84 84 0.103772
+61 325 736 735 0.999999

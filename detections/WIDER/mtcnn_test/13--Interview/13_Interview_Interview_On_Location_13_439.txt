@@ -1,0 +1,5 @@
+13--Interview/13_Interview_Interview_On_Location_13_439.jpg
+3
+508 22 42 42 0.287659
+488 555 63 63 0.20674
+351 139 387 387 0.999895

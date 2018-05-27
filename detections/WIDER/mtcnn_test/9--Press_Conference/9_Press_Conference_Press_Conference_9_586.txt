@@ -1,0 +1,5 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_586.jpg
+3
+146 689 107 106 0.351761
+159 565 160 159 0.241261
+198 174 534 534 1

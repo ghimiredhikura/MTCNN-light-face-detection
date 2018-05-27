@@ -1,0 +1,5 @@
+13--Interview/13_Interview_Interview_2_People_Visible_13_155.jpg
+3
+647 98 31 32 0.347848
+439 638 143 143 0.115866
+299 195 442 441 0.999999

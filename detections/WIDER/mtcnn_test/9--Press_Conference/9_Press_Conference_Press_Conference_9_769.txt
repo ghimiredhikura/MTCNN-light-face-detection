@@ -1,0 +1,5 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_769.jpg
+3
+143 712 42 42 0.152432
+207 876 33 34 0.352709
+338 192 410 410 1

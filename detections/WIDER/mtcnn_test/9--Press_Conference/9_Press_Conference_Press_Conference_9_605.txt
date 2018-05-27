@@ -1,0 +1,6 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_605.jpg
+4
+724 193 46 45 0.33558
+378 41 57 56 0.112302
+62 225 809 810 0.999995
+187 795 676 675 0.621531

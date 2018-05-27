@@ -1,0 +1,5 @@
+26--Soldier_Drilling/26_Soldier_Drilling_Soldiers_Drilling_26_651.jpg
+3
+383 702 44 43 0.108543
+60 707 55 55 0.114531
+249 45 436 436 0.999999

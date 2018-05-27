@@ -1,0 +1,6 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_947.jpg
+4
+15 84 63 64 0.134632
+0 799 102 131 0.578313
+230 223 557 557 0.999994
+164 657 635 636 0.155554

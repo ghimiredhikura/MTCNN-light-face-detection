@@ -1,0 +1,5 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_521.jpg
+3
+588 544 39 39 0.316437
+556 122 92 93 0.270909
+294 160 370 369 0.999976

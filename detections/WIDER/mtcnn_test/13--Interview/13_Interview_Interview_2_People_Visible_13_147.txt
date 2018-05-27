@@ -1,0 +1,5 @@
+13--Interview/13_Interview_Interview_2_People_Visible_13_147.jpg
+3
+212 459 62 61 0.199104
+494 58 306 306 0.999999
+114 0 274 252 0.115283

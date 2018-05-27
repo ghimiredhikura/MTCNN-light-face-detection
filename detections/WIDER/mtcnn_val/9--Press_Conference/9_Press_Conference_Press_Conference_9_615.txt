@@ -1,0 +1,5 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_615.jpg
+3
+180 531 57 57 0.126866
+251 380 70 70 0.121304
+311 128 373 372 0.999984

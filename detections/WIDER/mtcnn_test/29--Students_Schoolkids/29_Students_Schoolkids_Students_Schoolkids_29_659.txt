@@ -1,0 +1,5 @@
+29--Students_Schoolkids/29_Students_Schoolkids_Students_Schoolkids_29_659.jpg
+3
+181 108 217 218 0.522271
+714 360 284 283 0.625789
+61 362 674 674 0.999999

@@ -1,0 +1,4 @@
+40--Gymnastics/40_Gymnastics_Gymnastics_40_909.jpg
+2
+751 873 42 41 0.204129
+317 221 510 510 0.999971

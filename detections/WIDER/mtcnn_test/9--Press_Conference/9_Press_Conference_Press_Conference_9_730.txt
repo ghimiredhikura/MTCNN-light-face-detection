@@ -1,0 +1,5 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_730.jpg
+3
+780 831 32 32 0.220344
+308 1307 33 33 0.115786
+108 138 617 618 1

@@ -1,0 +1,5 @@
+32--Worker_Laborer/32_Worker_Laborer_Worker_Laborer_32_260.jpg
+3
+428 172 42 42 0.382199
+576 554 57 57 0.171788
+444 100 208 208 0.99983

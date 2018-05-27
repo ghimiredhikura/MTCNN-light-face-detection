@@ -1,0 +1,5 @@
+31--Waiter_Waitress/31_Waiter_Waitress_Waiter_Waitress_31_610.jpg
+3
+389 84 37 38 0.277431
+503 105 50 50 0.760978
+186 168 609 609 0.999885

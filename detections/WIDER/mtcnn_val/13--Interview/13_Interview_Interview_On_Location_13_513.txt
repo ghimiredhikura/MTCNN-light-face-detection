@@ -1,0 +1,5 @@
+13--Interview/13_Interview_Interview_On_Location_13_513.jpg
+3
+585 43 33 33 0.558403
+545 268 80 80 0.413428
+451 86 234 234 0.995927

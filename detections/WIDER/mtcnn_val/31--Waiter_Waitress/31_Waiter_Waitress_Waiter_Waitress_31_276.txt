@@ -1,0 +1,5 @@
+31--Waiter_Waitress/31_Waiter_Waitress_Waiter_Waitress_31_276.jpg
+3
+742 621 124 125 0.377947
+35 1076 69 66 0.13374
+118 312 705 706 0.99994

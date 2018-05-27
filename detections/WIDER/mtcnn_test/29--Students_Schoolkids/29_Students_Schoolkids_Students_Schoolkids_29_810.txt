@@ -1,0 +1,6 @@
+29--Students_Schoolkids/29_Students_Schoolkids_Students_Schoolkids_29_810.jpg
+4
+960 54 36 36 0.381676
+992 162 31 35 0.162295
+241 1139 47 46 0.101334
+175 239 697 697 0.999997

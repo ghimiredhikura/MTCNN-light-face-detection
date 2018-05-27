@@ -1,0 +1,5 @@
+26--Soldier_Drilling/26_Soldier_Drilling_Soldiers_Drilling_26_577.jpg
+3
+73 909 61 61 0.434416
+910 817 79 78 0.297028
+147 201 613 613 0.999999

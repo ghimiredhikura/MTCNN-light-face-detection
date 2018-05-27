@@ -1,0 +1,5 @@
+31--Waiter_Waitress/31_Waiter_Waitress_Waiter_Waitress_31_209.jpg
+3
+880 1077 52 52 0.328525
+866 1372 77 77 0.156086
+374 63 350 350 1

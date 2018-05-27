@@ -1,0 +1,5 @@
+13--Interview/13_Interview_Interview_On_Location_13_908.jpg
+3
+296 87 40 40 0.485044
+287 230 51 51 0.115253
+350 50 204 203 0.999998

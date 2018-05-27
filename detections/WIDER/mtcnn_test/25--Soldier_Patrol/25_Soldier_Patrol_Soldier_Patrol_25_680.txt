@@ -1,0 +1,4 @@
+25--Soldier_Patrol/25_Soldier_Patrol_Soldier_Patrol_25_680.jpg
+2
+815 1407 96 96 0.269416
+299 391 344 343 0.99994

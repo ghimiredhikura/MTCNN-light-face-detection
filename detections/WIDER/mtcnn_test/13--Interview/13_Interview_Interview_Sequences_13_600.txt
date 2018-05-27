@@ -1,0 +1,4 @@
+13--Interview/13_Interview_Interview_Sequences_13_600.jpg
+2
+828 69 195 217 0.296422
+191 39 465 464 0.999992

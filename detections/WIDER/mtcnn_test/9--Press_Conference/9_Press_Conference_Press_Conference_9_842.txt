@@ -1,0 +1,6 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_842.jpg
+4
+270 1332 37 37 0.239604
+327 1417 39 39 0.111339
+274 1474 38 38 0.234262
+123 189 579 579 1

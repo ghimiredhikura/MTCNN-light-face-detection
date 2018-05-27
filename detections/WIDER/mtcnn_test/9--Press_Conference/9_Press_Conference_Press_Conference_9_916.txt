@@ -1,0 +1,5 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_916.jpg
+3
+896 882 39 39 0.10641
+82 886 64 64 0.33947
+185 236 546 546 0.999947

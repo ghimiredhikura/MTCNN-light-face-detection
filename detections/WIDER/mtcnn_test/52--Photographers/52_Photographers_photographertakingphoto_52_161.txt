@@ -1,0 +1,6 @@
+52--Photographers/52_Photographers_photographertakingphoto_52_161.jpg
+4
+503 275 37 36 0.224778
+559 341 41 42 0.797706
+539 194 52 52 0.177188
+243 192 260 259 0.93975

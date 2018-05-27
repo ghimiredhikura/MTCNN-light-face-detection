@@ -1,0 +1,5 @@
+13--Interview/13_Interview_Interview_2_People_Visible_13_13.jpg
+3
+667 63 25 24 0.398487
+647 107 25 25 0.121868
+575 177 227 227 0.731986

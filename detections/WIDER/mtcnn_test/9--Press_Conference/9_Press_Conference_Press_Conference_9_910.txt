@@ -1,0 +1,5 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_910.jpg
+3
+907 1208 56 56 0.194875
+573 0 60 52 0.323067
+204 294 498 499 1

@@ -1,0 +1,4 @@
+13--Interview/13_Interview_Interview_2_People_Visible_13_442.jpg
+2
+983 418 41 41 0.148036
+859 505 60 60 0.195684

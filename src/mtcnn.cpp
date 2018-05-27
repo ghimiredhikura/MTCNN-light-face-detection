@@ -4,7 +4,8 @@
 #include "mtcnn.h"
 
 Pnet::Pnet() {
-	Pthreshold = 0.6;
+	//Pthreshold = 0.6;
+	Pthreshold = 0.1;
 	nms_threshold = 0.5;
 	firstFlag = true;
 
@@ -32,7 +33,7 @@ Pnet::Pnet() {
 		this->conv4c1_wb->pdata, this->conv4c1_wb->pbias, \
 		this->conv4c2_wb->pdata, this->conv4c2_wb->pbias \
 	};
-	string filename = "Pnet.txt";
+	string filename = "../model/Pnet.txt";
 	readData(filename, dataNumber, pointTeam);
 }
 
@@ -164,7 +165,8 @@ void Pnet::freePnetSpace(){
 }
 
 Rnet::Rnet() {
-	Rthreshold = 0.7;
+	//Rthreshold = 0.7;
+	Rthreshold = 0.1;
 
 	this->rgb = new pBox;
 	this->conv1_matrix = new pBox;
@@ -212,7 +214,7 @@ Rnet::Rnet() {
 		this->score_wb->pdata, this->score_wb->pbias, \
 		this->location_wb->pdata, this->location_wb->pbias \
 	};
-	string filename = "Rnet.txt";
+	string filename = "../model/Rnet.txt";
 	readData(filename, dataNumber, pointTeam);
 
 	//Init the network
@@ -301,7 +303,8 @@ void Rnet::run(Mat &image) {
 }
 
 Onet::Onet() {
-	Othreshold = 0.7;
+	//Othreshold = 0.7;
+	Othreshold = 0.1;
 	this->rgb = new pBox;
 
 	this->conv1_matrix = new pBox;
@@ -363,7 +366,7 @@ Onet::Onet() {
 		this->location_wb->pdata, this->location_wb->pbias, \
 		this->keyPoint_wb->pdata, this->keyPoint_wb->pbias \
 	};
-	string filename = "Onet.txt";
+	string filename = "../model/Onet.txt";
 	readData(filename, dataNumber, pointTeam);
 
 	//Init the network
@@ -488,7 +491,8 @@ mtcnn::mtcnn() {
 	factor = 0.709;
 }
 
-void mtcnn::findFace(Mat &image, int min_size) {
+vector<struct Bbox> mtcnn::findFace(Mat &image, int min_size) {
+
 	vector<float> scales_;
 	int row = image.rows;
 	int col = image.cols;
@@ -528,7 +532,7 @@ void mtcnn::findFace(Mat &image, int min_size) {
 		proposeNet.freePnetSpace();
 	}
 	//the first stage's nms
-	if (count<1)return;
+	if (count<1)return thirdBbox_;
 	nms(firstBbox_, firstOrderScore_, nms_threshold[0]);
 	refineAndSquareBbox(firstBbox_, image.rows, image.cols);
 
@@ -554,7 +558,7 @@ void mtcnn::findFace(Mat &image, int min_size) {
 			}
 		}
 	}
-	if (count<1)return;
+	if (count<1)return thirdBbox_;
 	nms(secondBbox_, secondBboxScore_, nms_threshold[1]);
 	refineAndSquareBbox(secondBbox_, image.rows, image.cols);
 
@@ -589,15 +593,14 @@ void mtcnn::findFace(Mat &image, int min_size) {
 		}
 	}
 
-	if (count<1)return;
+	if (count<1) return thirdBbox_;
+	
 	refineAndSquareBbox(thirdBbox_, image.rows, image.cols);
 	nms(thirdBbox_, thirdBboxScore_, nms_threshold[2], "Min");
 
-	for (vector<struct Bbox>::iterator it = thirdBbox_.begin(); it != thirdBbox_.end(); it++) {
-		if ((*it).exist) {
-			rectangle(image, Point((*it).y1, (*it).x1), Point((*it).y2, (*it).x2), Scalar(0, 0, 255), 2, 8, 0);
-			for (int num = 0; num<5; num++)circle(image, Point((int)*(it->ppoint + num), (int)*(it->ppoint + num + 5)), 3, Scalar(0, 255, 255), -1);
-		}
+	vector<struct Bbox> resultBbox;
+	for(int i=0; i < thirdBbox_.size(); i++) {
+		resultBbox.push_back(thirdBbox_[i]);
 	}
 
 	firstBbox_.clear();
@@ -606,4 +609,6 @@ void mtcnn::findFace(Mat &image, int min_size) {
 	secondBboxScore_.clear();
 	thirdBbox_.clear();
 	thirdBboxScore_.clear();
+
+	return resultBbox;
 }

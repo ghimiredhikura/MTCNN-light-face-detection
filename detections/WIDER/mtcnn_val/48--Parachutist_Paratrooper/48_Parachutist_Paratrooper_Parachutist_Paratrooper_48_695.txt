@@ -1,0 +1,7 @@
+48--Parachutist_Paratrooper/48_Parachutist_Paratrooper_Parachutist_Paratrooper_48_695.jpg
+5
+432 215 31 31 0.222892
+759 821 37 37 0.781562
+450 305 44 44 0.201703
+468 264 75 74 0.459654
+327 379 434 434 0.999844

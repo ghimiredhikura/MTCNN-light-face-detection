@@ -1,0 +1,4 @@
+35--Basketball/35_Basketball_playingbasketball_35_735.jpg
+2
+149 763 49 48 0.119589
+332 246 382 381 0.999999

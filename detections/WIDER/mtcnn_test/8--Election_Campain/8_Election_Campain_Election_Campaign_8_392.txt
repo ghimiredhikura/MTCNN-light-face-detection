@@ -1,0 +1,6 @@
+8--Election_Campain/8_Election_Campain_Election_Campaign_8_392.jpg
+4
+451 12 42 41 0.103592
+485 19 41 41 0.258294
+0 606 39 41 0.14088
+271 159 427 427 0.99998

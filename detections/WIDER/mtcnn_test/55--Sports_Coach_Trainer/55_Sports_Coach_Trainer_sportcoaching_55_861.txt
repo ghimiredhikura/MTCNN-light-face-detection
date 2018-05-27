@@ -1,0 +1,6 @@
+55--Sports_Coach_Trainer/55_Sports_Coach_Trainer_sportcoaching_55_861.jpg
+4
+434 164 34 35 0.119682
+455 93 210 211 0.999999
+149 0 230 213 0.114022
+776 430 158 145 0.211298

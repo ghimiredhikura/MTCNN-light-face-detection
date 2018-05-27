@@ -1,0 +1,5 @@
+9--Press_Conference/9_Press_Conference_Press_Conference_9_403.jpg
+3
+928 1193 42 42 0.668156
+818 524 154 155 0.152858
+154 300 743 742 1

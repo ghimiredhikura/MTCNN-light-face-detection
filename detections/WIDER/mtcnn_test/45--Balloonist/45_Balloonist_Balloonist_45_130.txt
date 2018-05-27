@@ -1,0 +1,4 @@
+45--Balloonist/45_Balloonist_Balloonist_45_130.jpg
+2
+238 234 35 35 0.42524
+680 285 120 119 0.999909

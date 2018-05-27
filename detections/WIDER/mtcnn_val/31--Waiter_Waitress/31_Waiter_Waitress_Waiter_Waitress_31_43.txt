@@ -1,0 +1,5 @@
+31--Waiter_Waitress/31_Waiter_Waitress_Waiter_Waitress_31_43.jpg
+3
+276 49 158 158 0.999999
+638 39 153 153 0.999996
+622 488 167 167 0.613008

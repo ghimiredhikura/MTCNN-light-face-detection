@@ -1,0 +1,6 @@
+55--Sports_Coach_Trainer/55_Sports_Coach_Trainer_sportcoaching_55_523.jpg
+4
+193 816 59 59 0.172056
+712 321 240 240 0.341559
+215 313 640 640 0.999997
+490 409 533 671 0.178118

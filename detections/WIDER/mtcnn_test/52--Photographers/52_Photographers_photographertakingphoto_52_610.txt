@@ -1,0 +1,6 @@
+52--Photographers/52_Photographers_photographertakingphoto_52_610.jpg
+4
+273 20 60 61 0.112141
+188 264 48 48 0.262922
+900 590 120 120 0.37499
+206 48 479 479 0.978233

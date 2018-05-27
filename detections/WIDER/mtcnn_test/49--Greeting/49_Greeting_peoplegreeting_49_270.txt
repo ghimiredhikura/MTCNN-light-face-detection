@@ -1,0 +1,4 @@
+49--Greeting/49_Greeting_peoplegreeting_49_270.jpg
+2
+517 717 49 49 0.116382
+386 162 433 433 0.995415

@@ -1,0 +1,5 @@
+29--Students_Schoolkids/29_Students_Schoolkids_Students_Schoolkids_29_126.jpg
+3
+127 508 93 93 0.194635
+0 0 475 518 0.999897
+484 0 539 554 0.999763
