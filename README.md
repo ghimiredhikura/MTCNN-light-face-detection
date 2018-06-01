@@ -7,12 +7,38 @@ This repository contains MTCNN implementation with no framework. Most of the sou
 At first you need to install OpenCV2.0.x+, and openblas. 
 
 ```
-git clone https://github.com/ghimiredhikura/MTCNN-light-face-detection.git
-cd MTCNN-light-face-detection/
-mkdir build
-cd build/
-cmake ..
-make ./mtcnn-light
+$git clone https://github.com/ghimiredhikura/MTCNN-light-face-detection.git
+$cd MTCNN-light-face-detection/
+$mkdir build
+$cd build/
+$cmake ..
+$make 
+```
+#### 1. Test webcam
+```
+$./mtcnn-light -mode=0 -webcam=0
+```
+#### 2. Test single image
+```
+$./mtcnn-light -mode=1 -path=../image/1.jpg
+```
+#### 3. Test image lists
+```
+$./mtcnn-light -mode=2 -path=../image/
+```
+#### 4. Evaluation in benchmark dataset, detection files will be stored in "detections" folder. 
+```
+a) afw dataset
+$./mtcnn-light -mode=3 -dataset=AFW -path=/path/to/afw/dataset/
+
+b) PASCAL dataset
+$./mtcnn-light -mode=3 -dataset=PASCAL -path=/path/to/pascal/dataset/
+
+c) FDDB dataset
+$./mtcnn-light -mode=3 -dataset=FDDB -path=/path/to/fddb/dataset/
+
+d) WIDER_val dataset
+#./mtcnn-light -mode=3 -dataset=WIDER_VAL -path=/path/to/wider/validation/dataset/
 ```
 
 ### 2. Evaluation results in benchmark datasets
