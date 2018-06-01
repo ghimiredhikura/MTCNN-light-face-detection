@@ -1,0 +1,4 @@
+distractor/Hydrant_trafficsign_00336
+2
+239 278 18 19 0.184267
+295 338 31 31 0.169535

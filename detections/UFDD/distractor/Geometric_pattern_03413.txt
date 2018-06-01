@@ -1,0 +1,3 @@
+distractor/Geometric_pattern_03413
+1
+887 3 46 45 0.175869

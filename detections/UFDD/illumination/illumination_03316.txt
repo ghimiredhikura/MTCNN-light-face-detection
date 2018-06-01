@@ -1,0 +1,3 @@
+illumination/illumination_03316
+1
+274 505 41 42 0.226141

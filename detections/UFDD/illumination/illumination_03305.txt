@@ -1,0 +1,3 @@
+illumination/illumination_03305
+1
+340 339 37 37 0.42466

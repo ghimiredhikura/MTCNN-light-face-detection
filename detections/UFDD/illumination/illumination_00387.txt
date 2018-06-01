@@ -1,0 +1,3 @@
+illumination/illumination_00387
+1
+552 118 206 206 0.999994

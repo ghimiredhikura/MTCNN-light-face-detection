@@ -1,0 +1,3 @@
+distractor/Hydrant_trafficsign_00409
+1
+23 379 105 104 0.144754

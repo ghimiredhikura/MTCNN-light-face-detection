@@ -1,0 +1,4 @@
+distractor/Hydrant_trafficsign_00327
+2
+493 402 76 76 0.281828
+318 435 39 38 0.216658

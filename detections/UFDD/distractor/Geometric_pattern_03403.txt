@@ -1,0 +1,3 @@
+distractor/Geometric_pattern_03403
+1
+614 369 37 37 0.494955

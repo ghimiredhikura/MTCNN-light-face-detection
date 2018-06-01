@@ -1,0 +1,3 @@
+distractor/Hydrant_trafficsign_00370
+1
+554 421 28 28 0.20857

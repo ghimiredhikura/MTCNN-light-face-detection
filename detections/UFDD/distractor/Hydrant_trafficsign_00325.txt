@@ -1,0 +1,4 @@
+distractor/Hydrant_trafficsign_00325
+2
+102 601 42 42 0.441959
+809 598 38 38 0.108944

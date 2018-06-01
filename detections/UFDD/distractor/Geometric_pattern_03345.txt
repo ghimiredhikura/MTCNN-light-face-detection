@@ -1,0 +1,3 @@
+distractor/Geometric_pattern_03345
+1
+707 332 34 35 0.222336

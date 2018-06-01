@@ -1,0 +1,3 @@
+distractor/Teddybear_00784
+1
+283 222 153 153 0.188159

@@ -1,0 +1,3 @@
+distractor/Geometric_pattern_03336
+1
+959 526 35 35 0.631392

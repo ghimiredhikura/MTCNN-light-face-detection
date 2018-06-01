@@ -1,0 +1,3 @@
+distractor/Hydrant_trafficsign_00303
+1
+770 305 108 107 0.169508

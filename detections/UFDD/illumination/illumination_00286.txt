@@ -1,0 +1,3 @@
+illumination/illumination_00286
+1
+388 263 45 45 0.516222

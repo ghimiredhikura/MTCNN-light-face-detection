@@ -1,0 +1,3 @@
+distractor/Geometric_pattern_03372
+1
+39 566 258 201 0.46481

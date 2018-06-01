@@ -1,0 +1,4 @@
+distractor/Geometric_pattern_03407
+2
+65 222 47 48 0.106016
+23 504 50 49 0.104018

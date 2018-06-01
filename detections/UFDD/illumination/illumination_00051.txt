@@ -1,0 +1,3 @@
+illumination/illumination_00051
+1
+506 313 35 34 0.306635

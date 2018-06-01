@@ -1,0 +1,3 @@
+distractor/Geometric_pattern_03374
+1
+734 17 38 38 0.139684

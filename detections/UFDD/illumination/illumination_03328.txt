@@ -1,0 +1,3 @@
+illumination/illumination_03328
+1
+368 150 282 282 0.844508

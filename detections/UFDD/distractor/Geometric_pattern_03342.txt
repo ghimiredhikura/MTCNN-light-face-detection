@@ -1,0 +1,3 @@
+distractor/Geometric_pattern_03342
+1
+869 315 92 92 0.181835

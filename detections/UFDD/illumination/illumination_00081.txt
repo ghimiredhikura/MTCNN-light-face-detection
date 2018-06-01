@@ -1,0 +1,3 @@
+illumination/illumination_00081
+1
+313 398 259 259 0.946117

@@ -1,0 +1,3 @@
+illumination/illumination_03341
+1
+608 240 35 35 0.317319

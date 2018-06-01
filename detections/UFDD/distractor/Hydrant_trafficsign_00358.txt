@@ -1,0 +1,4 @@
+distractor/Hydrant_trafficsign_00358
+2
+684 302 35 35 0.147654
+248 319 50 49 0.535588

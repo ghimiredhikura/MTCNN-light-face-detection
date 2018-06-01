@@ -1,0 +1,3 @@
+illumination/illumination_00681
+1
+433 70 202 202 0.95699
