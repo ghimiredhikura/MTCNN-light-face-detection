@@ -4,6 +4,7 @@
 #include <time.h>
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <vector>
 
 #include "network.h"
@@ -17,7 +18,7 @@
 using namespace std;
 using namespace cv;
 
-enum DATASET { AFW, PASCAL, FDDB, WIDER_TEST, WIDER_VAL};
+enum DATASET { AFW, PASCAL, FDDB, WIDER_TEST, WIDER_VAL, UFDD};
 enum MODE {WEBCAM, BENCHMARK_EVALUATION, IMAGE, IMAGE_LIST};
 
 typedef struct _tagMTCNNResult {
@@ -65,13 +66,18 @@ std::vector<MTCNNResult> mtcnnDetection(mtcnn& _find, cv::Mat image, int min_img
 }
 
 
-void run_afw_pascal_fddb(DATASET m_data)
+void run_afw_pascal_fddb(DATASET m_data, std::string dataset_path)
 {
+	cout << m_data << endl;
+	cout << dataset_path << endl;
+
 	std::string str_img_file;
 	if(m_data == AFW) str_img_file = "../detections/AFW/afw_img_list.txt";
 	else if (m_data == PASCAL) str_img_file = "../detections/PASCAL/pascal_img_list.txt";
 	else if (m_data == FDDB) str_img_file = "../detections/FDDB/fddb_img_list.txt";	
 	else return ;
+
+	cout << str_img_file << endl;
 
 	std::ifstream inFile(str_img_file.c_str(), std::ifstream::in);
 
@@ -97,9 +103,9 @@ void run_afw_pascal_fddb(DATASET m_data)
 		std::string imname = image_list[i];
 		std::string tempname = imname;
 
-		if(m_data==AFW) imname = "../../../SFD_ROOT/datasets/AFW/testimages/"+imname+".jpg";
-		else if(m_data==PASCAL) imname = "../../../SFD_ROOT/datasets/PASCAL/VOCdevkit/VOC2012/JPEGImages/"+imname;
-		else if(m_data==FDDB) imname = "../../../SFD_ROOT/datasets/FDDB/"+imname+".jpg";
+		if(m_data==AFW) imname = dataset_path+imname+".jpg";
+		else if(m_data==PASCAL) imname = dataset_path+imname;
+		else if(m_data==FDDB) imname = dataset_path+imname+".jpg";
 
 		cout << "processing image " << i+1 << "/" << image_list.size() << " [" << imname.c_str() << "]" << endl;
 
@@ -151,7 +157,7 @@ void make_wider_dir(DATASET m_data, std::string& result_dir)
 }
 
 
-void run_wider(DATASET m_data)
+void run_wider(DATASET m_data, std::string dataset_path)
 {
 	std::string result_dir;
 	if(m_data == WIDER_TEST) result_dir = "../detections/WIDER/mtcnn_test/";
@@ -175,9 +181,9 @@ void run_wider(DATASET m_data)
 		image_list.push_back(str);
 	}
 
-	std::string wider_path;
-	if(m_data==WIDER_TEST) wider_path = "/home/anudee/Desktop/CAFFE_SFD/datasets/WIDER/WIDER_test/images/";
-	else if(m_data==WIDER_VAL) wider_path = "/home/anudee/Desktop/CAFFE_SFD/datasets/WIDER/WIDER_val/images/"; 
+	std::string wider_path = dataset_path;
+	//if(m_data==WIDER_TEST) wider_path = "/home/anudee/Desktop/CAFFE_SFD/datasets/WIDER/WIDER_test/images/";
+	//else if(m_data==WIDER_VAL) wider_path = "/home/anudee/Desktop/CAFFE_SFD/datasets/WIDER/WIDER_val/images/"; 
 
 	for(int i = 0; i < image_list.size(); i++)
 	{
@@ -210,11 +216,11 @@ void run_wider(DATASET m_data)
 	}	
 }
 
-void run_webcam()
+void run_webcam(int webcam_id)
 {
 	mtcnn find;
 
-	VideoCapture cap(0);
+	VideoCapture cap(webcam_id);
 	if(!cap.isOpened()) {
 		cout << "fail to open webcam!" << endl;
 		return;
@@ -240,10 +246,10 @@ void run_webcam()
 	}
 }
 
-void run_image()
+void run_image(std::string image_path)
 {
 	mtcnn find;
-	cv::Mat image = cv::imread("../image/1.jpg");	
+	cv::Mat image = cv::imread(image_path.c_str());
 	if(image.empty()) {
 		cout << "Image not exist in the specified dir!";
 		return;	
@@ -254,36 +260,99 @@ void run_image()
 	imshow("result", image);	
 	waitKey(1);
 	getchar();
+}
+
+void run_images(std::string image_path)
+{
+	std::vector<cv::String> img_list;
+	glob(image_path+"*.jpg", img_list, false);
+
+	size_t count = img_list.size();
+	for(size_t i=0;i<count;i++) 
+	{
+		mtcnn find;
+		cv::Mat image = cv::imread(img_list[i].c_str());
+		if(image.empty()) {
+			cout << "Image not exist in the specified dir!";
+			return;	
+		} 
+	
+		std::vector<MTCNNResult> mtcnn_results = mtcnnDetection(find, image, 60);		
+	
+		imshow("result", image);	
+		waitKey(1);
+	}
 } 
 
-int main()
-{	
-	// select running mode
-	MODE m_mode = WEBCAM;
+cv::String keys =
+	"{ help h 		| | Print help message. }"
+	"{ mode m 		| 0 | Select running mode: "
+						"0: WEBCAM, "
+						"1: IMAGE, "
+						"2: IMAGE_LIST, "
+						"3: BENCHMARK_EVALUATION }"
+	"{ webcam i 	| 0 | webcam id, if mode is 0 }"
+	"{ dataset d 	| AFW | select dataset, if mode is 3:"
+						   "AFW: afw dataset, "
+						   "PASCAL: pascal dataset, "
+						   "FDDB: fddb dataset, "
+						   "WIDER_VAL: wider validation set, "
+						   "WIDER_TEST: wider test set }"
+	"{ path p 		| | Path to image file or image list dir or benchmark dataset }";
+
+int main( int argc, char** argv)
+{
+	cv::CommandLineParser parser(argc, argv, keys);
+	//parser.about("Use this script to run mtcnn light algorithm for face detection in single image, image list, webcam, and for Benchmark dataset evaluation");
+
+	if(argc == 1 || parser.has("help")) 
+	{
+		parser.printMessage();
+		return 0;
+	}
+
+	MODE m_mode;
+	int mode = parser.get<int>("mode");		
+
+	if(mode == 1) m_mode = IMAGE;
+	else if(mode == 2) m_mode = IMAGE_LIST;
+	else if(mode == 3) m_mode = BENCHMARK_EVALUATION;
+	else m_mode = WEBCAM;
 
 	if(m_mode == WEBCAM)
 	{
-		run_webcam();	
+		int webcam_id = parser.get<int>("webcam");
+		run_webcam(webcam_id);
 	}
 	else if(m_mode == IMAGE) 
 	{
-		run_image();
+		std::string image_path = parser.get<String>("path");
+		run_image(image_path);
 	}
 	else if(m_mode == IMAGE_LIST) 
 	{
-		// to be implemented
+		std::string image_path = parser.get<String>("path");
+		run_images(image_path);	
 	}
 	else if (m_mode == BENCHMARK_EVALUATION)
-	{	
-		// select dataset
-		DATASET m_data = WIDER_VAL;
+	{
+		DATASET m_data;
+		std::string dataset_name = parser.get<String>("dataset");
+		cout << dataset_name << endl;
+		if(dataset_name == "PASCAL") m_data = PASCAL;
+		else if(dataset_name == "FDDB") m_data = FDDB;
+		else if(dataset_name == "WIDER_VAL") m_data = WIDER_VAL;
+		else if(dataset_name == "WIDER_TEST") m_data = WIDER_TEST;
+		//else if(dataset_name == "UFFD") {};
+		else m_data == AFW; 
+
+		std::string dataset_path = parser.get<String>("path");
 
 		if(m_data == AFW || m_data == PASCAL || m_data == FDDB)
-			run_afw_pascal_fddb(m_data);
+			run_afw_pascal_fddb(m_data, dataset_path);
 		else if(m_data == WIDER_VAL || m_data == WIDER_TEST) 
-			run_wider(m_data);
+			run_wider(m_data, dataset_path);
 	}
-
 	
 	return 1;
 }
