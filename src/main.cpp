@@ -216,6 +216,56 @@ void run_wider(DATASET m_data, std::string dataset_path)
 	}	
 }
 
+void run_ufdd(std::string dataset_path)
+{
+	std::string result_dir;
+	result_dir = "../detections/UFDD/";
+
+	std::string str_img_file;
+	str_img_file = "../detections/UFDD/ufdd_img_list.txt";
+
+	std::ifstream inFile(str_img_file.c_str(), std::ifstream::in);
+
+	std::vector<string> image_list;
+	while(!inFile.eof()) 
+	{
+		std::string str;
+		inFile >> str;
+		if(str=="") continue;
+		image_list.push_back(str);
+	}
+
+	std::string ufdd_path = dataset_path;
+
+	for(int i = 0; i < image_list.size(); i++)
+	{
+		std::string imname = ufdd_path+image_list[i]+".jpg";
+		cout << imname << endl;
+		cout << "processing image " << i+1 << "/" << image_list.size() << " [" << image_list[i].c_str() << "]" << endl;
+
+		cv::Mat image = cv::imread(imname);
+
+		mtcnn find;
+		std::vector<MTCNNResult> mtcnn_results = mtcnnDetection(find, image, 30);
+
+		std::string txt_name = image_list[i]+".txt";
+		txt_name = result_dir+txt_name;
+	
+		std::ofstream out_txt(txt_name.c_str());
+		out_txt << image_list[i] << "\n";
+		out_txt << mtcnn_results.size() << "\n";
+		for(int j =0; j < mtcnn_results.size(); j++) {
+			out_txt << mtcnn_results[j].r.x << " " << mtcnn_results[j].r.y << " " << mtcnn_results[j].r.width << " " 
+			<< mtcnn_results[j].r.height << " " << mtcnn_results[j].score << "\n";
+		}
+		out_txt.close();
+
+		imshow("image", image);
+
+		waitKey(1);
+	}	
+}
+
 void run_webcam(int webcam_id)
 {
 	mtcnn find;
@@ -287,23 +337,23 @@ void run_images(std::string image_path)
 cv::String keys =
 	"{ help h 		| | Print help message. }"
 	"{ mode m 		| 0 | Select running mode: "
-						"0: WEBCAM, "
-						"1: IMAGE, "
-						"2: IMAGE_LIST, "
-						"3: BENCHMARK_EVALUATION }"
+						"0: WEBCAM - get image streams from webcam, "
+						"1: IMAGE - detect faces in single image, "
+						"2: IMAGE_LIST - detect faces in set of images, "
+						"3: BENCHMARK_EVALUATION - benchmark evaluation, results will be stored in 'detections' }"
 	"{ webcam i 	| 0 | webcam id, if mode is 0 }"
 	"{ dataset d 	| AFW | select dataset, if mode is 3:"
 						   "AFW: afw dataset, "
 						   "PASCAL: pascal dataset, "
 						   "FDDB: fddb dataset, "
 						   "WIDER_VAL: wider validation set, "
-						   "WIDER_TEST: wider test set }"
+						   "WIDER_TEST: wider test set, "
+						   "UFDD: ufdd valudation set }"
 	"{ path p 		| | Path to image file or image list dir or benchmark dataset }";
 
 int main( int argc, char** argv)
 {
 	cv::CommandLineParser parser(argc, argv, keys);
-	//parser.about("Use this script to run mtcnn light algorithm for face detection in single image, image list, webcam, and for Benchmark dataset evaluation");
 
 	if(argc == 1 || parser.has("help")) 
 	{
@@ -343,8 +393,8 @@ int main( int argc, char** argv)
 		else if(dataset_name == "FDDB") m_data = FDDB;
 		else if(dataset_name == "WIDER_VAL") m_data = WIDER_VAL;
 		else if(dataset_name == "WIDER_TEST") m_data = WIDER_TEST;
-		//else if(dataset_name == "UFFD") {};
-		else m_data == AFW; 
+		else if(dataset_name == "UFDD") m_data = UFDD;
+		else if(dataset_name == "AFW") m_data = AFW; 
 
 		std::string dataset_path = parser.get<String>("path");
 
@@ -352,6 +402,8 @@ int main( int argc, char** argv)
 			run_afw_pascal_fddb(m_data, dataset_path);
 		else if(m_data == WIDER_VAL || m_data == WIDER_TEST) 
 			run_wider(m_data, dataset_path);
+		else if(m_data == UFDD)
+			run_ufdd(dataset_path);
 	}
 	
 	return 1;
