@@ -39,6 +39,9 @@ $./mtcnn-light -mode=3 -dataset=FDDB -path=/path/to/fddb/dataset/
 
 d) WIDER_val dataset
 #./mtcnn-light -mode=3 -dataset=WIDER_VAL -path=/path/to/wider/validation/dataset/
+
+e) UFDD dataset
+#./mtcnn-light -mode=3 -dataset=UFDD -path=/path/to/UFDD/validation/dataset/
 ```
 
 ### 2. Evaluation results in benchmark datasets
